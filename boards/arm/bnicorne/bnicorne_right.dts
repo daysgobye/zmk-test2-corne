@@ -50,56 +50,23 @@
 &pinctrl {
     spi2_default: spi2_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 24)>,
-                <NRF_PSEL(SPIM_MISO, 0, 27)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 3)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 2)>;
         };
     };
+
 
     spi2_sleep: spi2_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 24)>,
-                <NRF_PSEL(SPIM_MISO, 0, 27)>;
+            psels = <NRF_PSEL(SPIM_SCK, 0, 3)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 2)>;
             low-power-enable;
         };
     };
 
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 16)>,
-                <NRF_PSEL(TWIM_SCL, 0, 13)>;
-        };
-    };
 
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 16)>,
-                <NRF_PSEL(TWIM_SCL, 0, 13)>;
-            low-power-enable;
-        };
-    };
 };
 
-
-&i2c0 {
-    status = "okay";
-    compatible = "nordic,nrf-twim";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    clock-frequency = <100000>;
-
-    fuelgauge: bq274xx@55 {
-        compatible = "ti,bq274xx";
-        reg = <0x55>;
-        design-voltage = <3700>; //Battery Design Volatge in mV
-        design-capacity = <180>; //Battery Design Capacity in mAh
-        taper-current = <2>; //Battery Taper current in mAh
-        terminate-voltage = <2750>; //Battery Terminate Voltage in mV
-        int-gpios = <&gpio0 04 GPIO_ACTIVE_LOW>;
-    };
-};
 
 &spi2 {
     status = "okay";
@@ -123,3 +90,4 @@
         tcon = <0x22>;
     };
 };
+ 
