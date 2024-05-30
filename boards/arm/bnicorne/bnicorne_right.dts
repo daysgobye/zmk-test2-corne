@@ -10,7 +10,6 @@
 /{
     chosen {
         zephyr,display = &epd;
-        zmk,battery = &fuelgauge;
     };
 
     kscan0: kscan {
