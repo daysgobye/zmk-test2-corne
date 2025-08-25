@@ -19,7 +19,6 @@
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
         zmk,kscan = &kscan0;
-        zmk,display = &epd;
         zephyr,console = &cdc_acm_uart;
         zmk,matrix-transform = &default_transform;
     };
