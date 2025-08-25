@@ -21,4 +21,7 @@ include:
   - board: bnicorne_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    shield: nice_view
+
   - board: bnicorne_right
+    shield: nice_view

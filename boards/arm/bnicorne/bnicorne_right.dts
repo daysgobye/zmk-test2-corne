@@ -10,10 +10,6 @@
 #include "bnicorne.dtsi"
 
 /{
-    chosen {
-        zephyr,display = &epd;
-    };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
