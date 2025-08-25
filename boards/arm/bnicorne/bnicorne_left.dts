@@ -61,7 +61,7 @@
 };
 
 
-&nice_view_spi {
+nice_view_spi:&spi2 {
     status = "okay";
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi2_default>;
