@@ -18,8 +18,8 @@
 
 
 / {
-    model = "BNICORNE";
-    compatible = "bnicorne";
+    model = "BLECORNE";
+    compatible = "blecorne";
 
     chosen {
         zephyr,code-partition = &code_partition;

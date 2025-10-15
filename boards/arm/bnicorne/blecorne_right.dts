@@ -7,7 +7,7 @@
 *
 */
 
-#include "bnicorne.dtsi"
+#include "blecorne.dtsi"
 
 /{
     kscan0: kscan {

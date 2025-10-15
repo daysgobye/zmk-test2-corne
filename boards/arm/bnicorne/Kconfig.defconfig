@@ -6,7 +6,7 @@
 if BOARD_BNICORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "BNICORNE"
+    default "BLECORNE"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -17,7 +17,7 @@ endif # BOARD_BNICORNE_LEFT
 if BOARD_BNICORNE_LEFT || BOARD_BNICORNE_RIGHT
 
 config BOARD
-    default "bnicorne"
+    default "blecorne"
 
 config ZMK_SPLIT
     default y
